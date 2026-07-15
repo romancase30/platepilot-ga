@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PlatePilot GA</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<h1>PlatePilot GA</h1>
+<p class="subtitle">Georgia Prestige Plate Helper</p>
+
+<section id="importSection">
+
+<h2>Load Plates</h2>
+
+<textarea id="plateInput" placeholder="Paste license plates here, one per line"></textarea>
+
+<button id="loadBtn">Load Plates</button>
+
+<p id="count"></p>
+
+</section>
+
+
+<section id="checkSection" class="hidden">
+
+<div class="progress" id="progress"></div>
+
+<div class="plate-card">
+<h2 id="currentPlate">PLATE</h2>
+</div>
+
+
+<div class="buttons">
+
+<button id="copyBtn">📋 Copy Plate</button>
+
+<button id="openBtn">🌐 Open Georgia Checker</button>
+
+</div>
+
+
+<div class="result-buttons">
+
+<button id="availableBtn" class="available">
+🟢 Available
+</button>
+
+<button id="unavailableBtn" class="unavailable">
+🔴 Unavailable
+</button>
+
+<button id="skipBtn">
+🟡 Skip
+</button>
+
+</div>
+
+
+</section>
+
+
+<section>
+
+<button id="exportBtn">
+Export Results
+</button>
+
+</section>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
