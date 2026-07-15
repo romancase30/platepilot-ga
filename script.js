@@ -1,6 +1,6 @@
-let plates = [];
-let currentIndex = 0;
-let results = [];
+let plates = JSON.parse(localStorage.getItem("plates")) || [];
+let currentIndex = Number(localStorage.getItem("currentIndex")) || 0;
+let results = JSON.parse(localStorage.getItem("results")) || [];
 
 const plateInput = document.getElementById("plateInput");
 const loadBtn = document.getElementById("loadBtn");
@@ -32,7 +32,11 @@ loadBtn.addEventListener("click", () => {
     plates = [...new Set(plates)];
 
     currentIndex = 0;
-    results = [];
+results = [];
+
+localStorage.setItem("plates", JSON.stringify(plates));
+localStorage.setItem("currentIndex", currentIndex);
+localStorage.setItem("results", JSON.stringify(results));
 
     count.textContent = `${plates.length} plates loaded`;
 
@@ -66,14 +70,14 @@ function showCurrentPlate(){
 function saveResult(status){
 
     results.push({
-
         plate: plates[currentIndex],
         status: status
-
     });
 
-
     currentIndex++;
+
+    localStorage.setItem("results", JSON.stringify(results));
+    localStorage.setItem("currentIndex", currentIndex);
 
     showCurrentPlate();
 
