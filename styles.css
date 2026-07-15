@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #a8ff00;
+    color: #000;
+}
+
+.app {
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 5px;
+    letter-spacing: -2px;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+section {
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 180px;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 15px;
+    border: 2px solid black;
+    resize: vertical;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: 3px solid black;
+    background: white;
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.progress {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.plate-card {
+    background: black;
+    color: white;
+    padding: 30px 10px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+#currentPlate {
+    font-size: 55px;
+    text-align: center;
+    margin: 0;
+    letter-spacing: 5px;
+}
+
+.available {
+    background: #00d26a;
+}
+
+.unavailable {
+    background: #ff4b4b;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 38px;
+    }
+
+    #currentPlate {
+        font-size: 40px;
+    }
+}
